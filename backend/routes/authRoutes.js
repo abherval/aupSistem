@@ -12,7 +12,7 @@ router.post("/register", async (req, res) => {
     const confirmpassword = req.body.confirmpassword;
     const isAdmin = req.body.isAdmin;
 
-    console.log(req.body);
+    
 
     // check for required fields
     if(name === null || email === null || password === null || confirmpassword === null || isAdmin === null) {
@@ -40,7 +40,8 @@ router.post("/register", async (req, res) => {
     const user = new User({
         name: name,
         email: email,
-        password: passwordHash
+        password: passwordHash,
+        isAdmin: isAdmin
     });
 
     try {      
