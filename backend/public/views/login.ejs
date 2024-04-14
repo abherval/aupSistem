@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--Link de utilização do Bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles/styleLogin.css" />
+
+    <title>Login de Usuário</title>
+  </head>
+  <body>
+    <!--Formulario de Login-->
+    <div class="container">
+      <div class="container-fluid">
+        <form
+          id="frmLogin"
+          class="form-signin shadow rounded bg-light border border-success pt-4"
+        >
+          <div class="text-center mb-4">
+            <img
+              class="mb-4"
+              src="/img/LogoModernaAUPVertical.jpg"
+              alt=""
+              width="272"
+              height="80"
+            />
+            <h1 class="h3 mb-3 font-weight-normal">Sistema Gencial de ONGs</h1>
+            <p>Gestão Eletrônica Unificada de Processos e Serviços</p>
+            <span>
+              <div
+                class="alert alert-danger d-none"
+                role="alert"
+                id="alertLogin"
+              >
+                Erro ao logar no sistema
+              </div></span
+            >
+          </div>
+
+          <div class="form-label-group">
+            <input
+              type="text"
+              id="inputEmail"
+              name="email"
+              class="form-control"
+              placeholder="Entre com Usuário"
+              required
+              autofocus
+            />
+            <label for="inputEmail">Usuário do Sistema</label>
+          </div>
+
+          <div class="form-label-group">
+            <input
+              type="password"
+              id="inputPassword"
+              name="password"
+              class="form-control"
+              placeholder="Senha"
+              required
+            />
+            <label for="inputPassword">Digite sua Senha</label>
+          </div>
+
+          <div class="checkbox mb-3">
+            <label>
+              <input type="checkbox" value="1" id="checkboxLogin" /> Lembrar de
+              mim
+            </label>
+          </div>
+
+          <div class="d-grid gap-2 col-12 mx-auto btn-lg">
+            <button class="btn btn-success" type="button" onclick="login()">Entrar</button>
+          </div>
+          
+          <p class="mt-5 mb-3 text-muted text-center">&copy; DEVT3CH</p>
+          <div class="suporteTecnico">
+            <p class="etiqueta">Web:&nbsp</p>
+            <a href="http://www.abherval.dev">www.abherval.dev</a>
+          </div>
+        </form>
+      </div>
+    </div>
+    <!--Final do FormLogin--> 
+
+<!-- Adicione um modal no seu HTML -->
+
+<!--Scripts Bootstrap-->
+<!-- Antes do seu script de login -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha384-GLhlTQ8iE5r+U8d6nvjxOp6HJSnRElou/YiC9pG2gAq2MgBmGBmGCAU9MuhOfW" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<!--Scripts de login e renderização-->
+<script src="js/renderer.js"></script>
+<script src="js/login.js"></script>
+</body>
+</html>
